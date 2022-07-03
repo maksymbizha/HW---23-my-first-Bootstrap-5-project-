@@ -1,0 +1,43 @@
+.header{
+  box-shadow: 0 0 12px rgba(72, 79, 78, 0.17);
+
+  &__top{
+	background-color: $main-bg;
+	font-size: $font-size-sm;
+	padding: 5px 0;
+
+	&-lang-switcher{
+	  button,
+	  .dropdown-item{
+		font-size: $font-size-sm;
+	  }
+	}
+	&-contact-icon{
+	  padding-right: 10px;
+	}
+  }
+  &__search-wrapper{
+	margin-right: 65px;
+  }
+
+  &__search{
+	font-size: 16px;
+	color: black;
+  }
+  &__navigation{
+	.nav-item{
+	  &:not(:first-child):not(:last-child){
+		margin-right: 30px;
+	  }
+	  a{
+		color: black;
+	  }
+	}
+  }
+  &__auth{
+	gap: 16px;
+	i{
+	  font-size: $header-icons-size;
+	}
+  }
+}

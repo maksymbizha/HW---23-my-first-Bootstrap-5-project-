@@ -1,0 +1,9 @@
+.wall{
+  @media (max-width: 992px) {
+	&__switch{
+	  &-wrapper{
+		flex-direction: column;
+	  }
+	}
+  }
+}

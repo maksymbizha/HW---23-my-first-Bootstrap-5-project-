@@ -1,0 +1,14 @@
+body{
+  font-family: $font-family-main;
+  font-weight: $font-weight-normal;
+  font-size: $font-size-md;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+  &:hover{
+	color: $accent-color;
+	transition: $transition;
+  }
+}

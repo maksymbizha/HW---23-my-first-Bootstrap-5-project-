@@ -1,0 +1,27 @@
+.menu{
+  background-color: $main-bg;
+  padding: 5px 0;
+  gap: 20px;
+  .line{
+	width: 26px;
+	height: 1px;
+	border: 1px solid #BDBDBE;
+	margin: 8px 12px;
+  }
+  //li:before{
+	//content: ' ';
+	//display: inline-block;
+	//border: 1px solid #BDBDBE;
+	//color:black;
+	//width: 26px;
+	//margin: 4px 12px;
+  //}
+  //.active{
+	//&:before{
+	//  display: none;
+	//}
+	//a{
+	//  color: $accent-color;
+	//}
+  //}
+}

@@ -1,0 +1,20 @@
+.footer{
+  @media(max-width: 1200px){
+	&__contacts{
+	  img{
+		margin-bottom: 20px;
+	  }
+	}
+	&__news{
+	  &-title{
+		text-align: center;
+		margin-top: 20px;
+	  }
+	}
+  }
+  @media (max-width: 576px ) {
+	&__navigation-title{
+	  margin-top: 20px;
+	}
+  }
+}

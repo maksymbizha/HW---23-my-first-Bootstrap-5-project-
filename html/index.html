@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>HW - 23 (my first Bootstrap 5 project)</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="header__top-contact">
+                        <a href="tel:+33 (0)4 99 63 20 50">
+                            <i class="bi bi-telephone header__top-contact-icon"></i>
+                            <span>+33 (0)4 99 63 20 50</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="header__top-lang-switcher  justify-content-end d-flex">
+                        <div class="dropdown">
+                            <button class="btn btn-sm p-0  border-0 dropdown-toggle" type="button" id="lang-menu" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-globe2 header__top-contact-icon"></i>
+                                <span>English</span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="lang-menu">
+                                <li><button class="dropdown-item" type="button">Ukrainian</button></li>
+                                <li><button class="dropdown-item" type="button">Turkish</button></li>
+                                <li><button class="dropdown-item" type="button">German</button></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="header__navigation">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img class="img-fluid" src="../assets/icons/header-logo.svg" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item header__search-wrapper d-flex align-items-center">
+                            <a class="nav-link header__search p-0 "  href="#" data-bs-toggle="modal" data-bs-target="#search-modal" >
+                                <i class="bi bi-search"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle p-0" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Products
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                                <li><a class="dropdown-item" href="#">Products #1</a></li>
+                                <li><a class="dropdown-item" href="#">Products #2</a></li>
+                                <li><a class="dropdown-item" href="#">Products #3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle p-0" href="#" id="applicationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Applications
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="applicationsDropdown">
+                                <li><a class="dropdown-item" href="#">Applications #1</a></li>
+                                <li><a class="dropdown-item" href="#">Applications #2</a></li>
+                                <li><a class="dropdown-item" href="#">Applications #3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled p-0">Documentation</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex header__auth">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            <i class="bi bi-person"></i>
+                        </a>
+
+                        <a data-bs-toggle="offcanvas" href="#cartSection" role="button" aria-controls="offcanvasExample" >
+                            <i class="bi bi-cart2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+</header>
+<main>
+    <section class="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <menu class="menu__wrapper d-flex">
+                        <li class="active"><a href="#">Products</a></li>
+                        <li class="line"></li>
+                        <li><a href="#">Display Wall</a></li>
+                        <li class="line"></li>
+                        <li><a href="#">Products</a></li>
+                    </menu>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wall">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wall__title">
+                        <h1>Display Wall</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-3 col-sm-5">
+
+                    <div class="wall__dropdown-menu">
+                        <a class="nav-link dropdown-toggle" href="#" id="displayWallDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Display Wall
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="displayWallDropdown">
+                            <li><a class="dropdown-item" href="#">Display Wall #1</a></li>
+                            <li><a class="dropdown-item" href="#">Display Wall #2</a></li>
+                            <li><a class="dropdown-item" href="#">Display Wall #3</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="wall__btn-accordion-wrapper">
+                        <form>
+                            <div class="wall__btn d-flex">
+                                <label class="wall__btn-sub">23 Results
+                                    <input type="submit">
+                                </label>
+                                <div class="wall__btn-rest">
+                                    <i class="bi bi-x-circle d-flex">
+                                        <label>Clear all Filters
+                                            <input type="reset">
+                                        </label>
+                                    </i>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion" id="accordionPanelsStayOpenExample">
+
+                                <div class="accordion-item wall__checkbox-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                            Subcategory
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                                        <div class="accordion-body">
+                                            <div class="wall__checkbox-subcategory d-flex">
+                                                <div class="item">
+                                                    <input id="xpressions" type="checkbox">
+                                                    <label for="xpressions">Xpressions<span>(8)</span></label>
+                                                </div>
+                                                <div class="item">
+                                                    <input id="xtension" type="checkbox">
+                                                    <label for="xtension">Xtension<span>(8)</span></label>
+                                                </div>
+                                                <div class="item">
+                                                    <input id="virage" type="checkbox">
+                                                    <label for="virage">Virage<span>(8)</span></label>
+                                                </div>
+                                                <div class="item">
+                                                    <input id="contour" type="checkbox">
+                                                    <label for="contour">Contour<span>(4)</span></label>
+                                                </div>
+                                                <div class="item">
+                                                    <input id="xperience" type="checkbox">
+                                                    <label for="xperience">Xperience<span>(4)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item wall__checkbox-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree-type">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-type" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree-type   ">
+                                            Type
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree-type" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree-type">
+                                        <div class="accordion-body">
+                                            <div class="wall__checkbox-type d-flex">
+                                                <div class="item">
+                                                    <input id="pop" type="checkbox">
+                                                    <label for="pop">Pop-up<span>(8)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="tubar" type="checkbox">
+                                                    <label for="tubar">Tubar<span>(8)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="table" type="checkbox">
+                                                    <label for="table">Table top<span>(8)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item wall__checkbox-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree-features">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-features" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree-features">
+                                            Features
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree-features" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree-features">
+                                        <div class="accordion-body">
+                                            <div class="wall__checkbox-features d-flex">
+                                                <div class="item">
+                                                    <input id="backlit" type="checkbox">
+                                                    <label for="backlit">Backlit<span>(7)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="tv" type="checkbox">
+                                                    <label for="tv">TV Mount<span>(8)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="shelving" type="checkbox">
+                                                    <label for="shelving">Shelving<span>(8)</span></label>
+                                                </div>
+                                                <div class="item">
+                                                    <input id="arch" type="checkbox">
+                                                    <label for="arch">Arch<span>(4)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="sided" type="checkbox">
+                                                    <label for="sided">Double sided<span>(4)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item wall__checkbox-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree-width">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-width" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree-width">
+                                            Width
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree-width" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree-width">
+                                        <div class="accordion-body">
+                                            <div class="wall__checkbox-width d-flex">
+                                                <div class="item">
+                                                    <input id="w2.5" type="checkbox">
+                                                    <label for="w2.5">2.5<span>(7)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="w5" type="checkbox">
+                                                    <label for="w5">5<span>(8)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="w8" type="checkbox">
+                                                    <label for="w8">8<span>(8)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="w10" type="checkbox">
+                                                    <label for="w10">10<span>(8)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="w20" type="checkbox">
+                                                    <label for="w20">20<span>(8)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item wall__checkbox-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree-height">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-height" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree-height">
+                                            Height
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree-height" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree-height">
+                                        <div class="accordion-body">
+                                            <div class="wall__checkbox-height d-flex">
+                                                <div class="item">
+                                                    <input id="h7" type="checkbox">
+                                                    <label for="h7">4<span>(7)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="h8" type="checkbox">
+                                                    <label for="h8">8<span>(8)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="h10" type="checkbox">
+                                                    <label for="h10">10<span>(8)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item wall__checkbox-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree-form">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-form" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree-form">
+                                            Form
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree-form" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree-form">
+                                        <div class="accordion-body">
+                                            <div class="wall__checkbox-form d-flex">
+                                                <div class="item">
+                                                    <input id="straight" type="checkbox">
+                                                    <label for="straight">Straight<span>(7)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="curved" type="checkbox">
+                                                    <label for="curved">Curved<span>(8)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item wall__checkbox-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree-price">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-price" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree-price">
+                                            Price Range
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree-price" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree-price">
+                                        <div class="accordion-body">
+                                            <div class="wall__checkbox-price">
+                                                <div class="item">
+                                                    <input id="r550" type="checkbox">
+                                                    <label for="r550">550-699<span>(27)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="r700" type="checkbox">
+                                                    <label for="r700">700-999<span>(38)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="r1000" type="checkbox">
+                                                    <label for="r1000">1000-1999<span>(48)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="r2000" type="checkbox">
+                                                    <label for="r2000">2000-3999<span>(8)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="r4000" type="checkbox">
+                                                    <label for="r4000">4000+<span>(8)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item wall__checkbox-item">
+                                    <h2 class="accordion-header" id="panelsStayOpen-headingThree-time">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree-time" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree-time">
+                                            Set-up Time
+                                        </button>
+                                    </h2>
+                                    <div id="panelsStayOpen-collapseThree-time" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree-time">
+                                        <div class="accordion-body">
+                                            <div class="wall__checkbox-time d-flex">
+                                                <div class="item">
+                                                    <input id="fast" type="checkbox">
+                                                    <label for="fast">+1(Fast)<span>(27)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="easy" type="checkbox">
+                                                    <label for="easy">5+(Easy)<span>(38)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="average" type="checkbox">
+                                                    <label for="average">10+(Average)<span>(48)</span></label>
+                                                </div>
+
+                                                <div class="item">
+                                                    <input id="expert" type="checkbox">
+                                                    <label for="expert">20+(Expert)<span>(8)</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="col-lg-9 col-sm-7">
+
+                    <div class="wall__search">
+                        <form>
+                            <label class="wall__search-label">
+                                <input  type="text" placeholder="Search" >
+                                <button type="submit">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </label>
+                        </form>
+                    </div>
+
+                    <div class="row wall__product">
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                <span>
+                                    <img class="wall__product-tag-top" src="../assets/icons/tag-1.svg" alt="#">
+                                </span>
+                                    <img class="wall__product-img" src="../assets/icons/img-1.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                <span>
+                                    <img class="wall__product-tag-top" src="../assets/icons/tag-2.svg" alt="#">
+                                </span>
+                                    <span>
+                                    <img class="wall__product-tag-bottom" src="../assets/icons/tag-3.svg" alt="#">
+                                </span>
+                                    <img class="wall__product-img" src="../assets/icons/img-2.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                    <img class="wall__product-img" src="../assets/icons/img-3.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                <span>
+                                    <img class="wall__product-tag-top" src="../assets/icons/tag-2.svg" alt="#">
+                                </span>
+                                    <img class="wall__product-img" src="../assets/icons/img-1.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                    <div class="wall__product-hov-images d-flex">
+                                        <img class="wall__product-img" src="../assets/icons/img-1.svg" alt="#">
+                                        <img class="wall__product-img" src="../assets/icons/img-1.svg" alt="#">
+                                    </div>
+
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                    <span>
+                                       <img class="wall__product-tag-top" src="../assets/icons/tag-1.svg" alt="#">
+                                    </span>
+                                    <img class="wall__product-img" src="../assets/icons/img-3.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                <span>
+                                    <img class="wall__product-tag-top" src="../assets/icons/tag-2.svg" alt="#">
+                                </span>
+                                    <img class="wall__product-img" src="../assets/icons/img-1.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                    <img class="wall__product-img" src="../assets/icons/img-3.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                <span>
+                                    <img class="wall__product-tag-top" src="../assets/icons/tag-2.svg" alt="#">
+                                </span>
+                                    <span>
+                                    <img class="wall__product-tag-bottom" src="../assets/icons/tag-3.svg" alt="#">
+                                </span>
+                                    <img class="wall__product-img" src="../assets/icons/img-2.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                <span>
+                                    <img class="wall__product-tag-top" src="../assets/icons/tag-2.svg" alt="#">
+                                </span>
+                                    <img class="wall__product-img" src="../assets/icons/img-1.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                <span>
+                                    <img class="wall__product-tag-top" src="../assets/icons/tag-2.svg" alt="#">
+                                </span>
+                                    <span>
+                                    <img class="wall__product-tag-bottom" src="../assets/icons/tag-3.svg" alt="#">
+                                </span>
+                                    <img class="wall__product-img" src="../assets/icons/img-2.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                    <img class="wall__product-img" src="../assets/icons/img-3.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                    <img class="wall__product-img" src="../assets/icons/img-3.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                <span>
+                                    <img class="wall__product-tag-top" src="../assets/icons/tag-2.svg" alt="#">
+                                </span>
+                                    <img class="wall__product-img" src="../assets/icons/img-1.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="wall__product-item col-lg-4 col-md-6 col-sm-12 col-mb-3">
+                            <a href="#">
+                                <div class="wall__product-block">
+                                <span>
+                                    <img class="wall__product-tag-top" src="../assets/icons/tag-2.svg" alt="#">
+                                </span>
+                                    <span>
+                                    <img class="wall__product-tag-bottom" src="../assets/icons/tag-3.svg" alt="#">
+                                </span>
+                                    <img class="wall__product-img" src="../assets/icons/img-2.svg" alt="#">
+                                    <p class="wall__product-name">Contour 10x4</p>
+                                    <p class="wall__product-price">8123,99 €</p>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="wall__switch d-flex">
+                        <ul class="wall__switch-wrapper d-flex">
+                            <li>
+                                <a class="arrow-left" href="#">
+                                    <i class="bi bi-arrow-left"></i>
+                                </a>
+                            </li>
+                            <li>Page</li>
+                            <li class="center"> 1 </li>
+                            <li>of 128</li>
+                            <li>
+                                <a class="arrow-right" href="#">
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="wall__switch-drop-menu">
+                            <label>
+                                <select>
+                                    <option>50</option>
+                                    <option>60</option>
+                                    <option>70</option>
+                                    <option>80</option>
+                                    <option>90</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-3 col-lg-6 footer__contacts">
+                    <img class="footer__contacts-logo" src="../assets/icons/footer-logo.svg" alt="logo">
+                    <div class="footer__contacts-address d-flex">
+                        <i class="bi bi-geo-alt"></i>
+                        <address>
+                            344, rue Jardin Colar - 34130
+                            LANSARGUES - FRANCE
+                        </address>
+                    </div>
+                    <div class="footer__contacts-phone">
+                        <a class="d-flex align-items-center" href="tel:+330499632050">
+                            <i class="bi bi-telephone"></i>
+                            <span>+33 (0)4 99 63 20 50</span>
+                        </a>
+                    </div>
+
+                    <div class="footer__contacts-email">
+                        <a class="d-flex align-items-center" href="mailto:sales@duodisplay.com">
+                            <i class="bi bi-envelope"></i>
+                            <span>sales@duodisplay.com</span>
+                        </a>
+                    </div>
+
+                    <img src="../assets/icons/footer-made-in-france.svg" alt="logo">
+
+                </div>
+
+                <div class="col-xl-6 col-lg-12 footer__navigation">
+                    <div class="row">
+                        <div class="col-sm-3 col-6">
+                            <h3 class="footer__navigation-title">
+                                Products
+                            </h3>
+                            <ul class="footer__navigation-products">
+                                <li class="nav-products"><a href="#">Banner stands</a></li>
+                                <li class="nav-products"><a href="#">Display Wall</a></li>
+                                <li class="nav-products"><a href="#">Counters</a></li>
+                                <li class="nav-products"><a href="#">Outdoor</a></li>
+                                <li class="nav-products"><a href="#">Frames</a></li>
+                                <li class="nav-products"><a href="#">Stands</a></li>
+                                <li class="nav-products"><a href="#">Outdoor</a></li>
+                                <li class="nav-products"><a href="#">Frames</a></li>
+                                <li class="nav-products"><a href="#">Stands</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <h3 class="footer__navigation-title">
+                                Applications
+                            </h3>
+                            <ul class="footer__navigation-applications">
+                                <li class="nav-applications"><a href="#">Tradeshows</a></li>
+                                <li class="nav-applications"><a href="#">Events</a></li>
+                                <li class="nav-applications"><a href="#">Road-shows</a></li>
+                                <li class="nav-applications"><a href="#">Decoration</a></li>
+                                <li class="nav-applications"><a href="#">Retail</a></li>
+                                <li class="nav-applications"><a href="#">Printing</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <h3 class="footer__navigation-title">
+                                My Profile
+                            </h3>
+                            <ul class="footer__navigation-profile">
+                                <li class="nav-profile"><a href="#">Dashboard</a></li>
+                                <li class="nav-profile"><a href="#">Account</a></li>
+                                <li class="nav-profile"><a href="#">Orders</a></li>
+                                <li class="nav-profile"><a href="#">Quotes</a></li>
+                                <li class="nav-profile"><a href="#">My Contacts</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-6">
+                            <h3 class="footer__navigation-title">
+                                Duo Display
+                            </h3>
+                            <ul class="footer__navigation-display">
+                                <li class="nav-display"><a href="#">About Duo</a></li>
+                                <li class="nav-display"><a href="#">General terms</a></li>
+                                <li class="nav-display"><a href="#">Warranty</a></li>
+                                <li class="nav-display"><a href="#">Legal notice</a></li>
+                                <li class="nav-display"><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 footer__news">
+                    <h3 class="footer__news-title">Newsletter</h3>
+                    <form action="" class="footer__news-form">
+                        <label>
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit"><i class="bi bi-arrow-right-circle"></i></button>
+                        </label>
+                    </form>
+
+                    <!--                class="btn btn-sm p-0  border-0 dropdown-toggle"-->
+
+                    <div class="footer__dropdown">
+                        <button class="footer__dropdown-btn" type="button" id="lang-menu-footer" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-globe2 header__top-contact-icon" ></i>
+                            <span>English</span>
+                        </button>
+                        <ul class="footer__dropdown-menu dropdown-menu" aria-labelledby="lang-menu-footer">
+                            <li><button class="dropdown-item" type="button">Ukrainian</button></li>
+                            <li><button class="dropdown-item" type="button">Turkish</button></li>
+                            <li><button class="dropdown-item" type="button">German</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__social">
+                        <ul class="d-flex">
+                            <li><a class="footer__social-medium d-flex align-items-center justify-content-center" href="#"><i class="bi bi-medium"></i></a></li>
+                            <li><a class="footer__social-twitter d-flex align-items-center justify-content-center" href="#"><i class="bi bi-twitter"></i></a></li>
+                            <li><a class="footer__social-facebook d-flex align-items-center justify-content-center" href="#"><i class="bi bi-facebook"></i></a></li>
+                            <li><a class="footer__social-instagram d-flex align-items-center justify-content-center" href="#"><i class="bi bi-instagram"></i></a></li>
+                            <li><a class="footer__social-linkedin d-flex align-items-center justify-content-center" href="#"><i class="bi bi-linkedin"></i></a></li>
+                            <li><a class="footer__social-youtube d-flex align-items-center justify-content-center" href="#"><i class="bi bi-youtube"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__copywriter">
+                <div class="footer__copywriter-content d-flex">
+                    <p>© 2021 Duo Industrie. All rights reserved. From Duo with</p>
+                    <i class="bi bi-heart"></i>
+                </div>
+                <div class="footer__copywriter-btn">
+                    <button type="reset">
+                        <i class="bi bi-arrow-up-circle"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+
+
+<!--  Modal Search  -->
+<div class="modal fade" id="search-modal" tabindex="-1" aria-labelledby="search-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="search-modalLabel">Search product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--  Modal Register  -->
+<div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Password">
+                </div>
+
+                <div class="mb-3">
+                    <label for="repeatPasswordInput" class="form-label">Repeat password</label>
+                    <input type="password" class="form-control" id="repeatPasswordInput" placeholder="Repeat password">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Cart section -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartSection" aria-labelledby="cartSectionLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartSectionLabel">Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+            Your cart is empty
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
