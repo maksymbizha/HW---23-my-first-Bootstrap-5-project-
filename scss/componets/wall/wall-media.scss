@@ -6,4 +6,22 @@
 	  }
 	}
   }
+  @media (max-width: 767px) {
+	&__search{
+	  display: none;
+	}
+	&_btn-mobile{
+	  display: inline-block;
+	}
+  }
+  @media (max-width: 576px) {
+	&__product-block{
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  img{
+		max-width: 300px;
+	  }
+	}
+  }
 }
