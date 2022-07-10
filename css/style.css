@@ -254,6 +254,24 @@ a:hover {
   padding: 6px;
   border-radius: 16px;
 }
+.wall__mobile-btn-input {
+  display: none;
+}
+.wall__mobile-btn-label {
+  background-color: #99C63C;
+  padding: 10px 15px;
+  border-radius: 55px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+.wall #menu__toggle:checked ~ .wall__mobile-btn-label {
+  background-color: white;
+}
+.wall #menu__toggle:checked ~ .wall__btn-accordion-wrapper {
+  visibility: visible;
+}
 .wall__btn {
   padding-top: 15px;
   justify-content: space-around;
@@ -455,6 +473,19 @@ a:hover {
   }
   .wall__product-block img {
     max-width: 300px;
+  }
+  .wall__mobile-btn-label {
+    display: inline-block;
+    position: relative;
+  }
+  .wall__btn-accordion-wrapper {
+    visibility: hidden;
+    position: absolute;
+    top: 48%;
+    left: 2%;
+    z-index: 1;
+    width: 96%;
+    border: 2px black solid;
   }
 }
 

@@ -23,5 +23,19 @@
 		max-width: 300px;
 	  }
 	}
+	&__mobile-btn-label{
+	  display: inline-block;
+	  position: relative;
+
+	}
+	&__btn-accordion-wrapper{
+	  visibility: hidden;
+	  position: absolute;
+	  top: 48%;
+	  left: 2%;
+	  z-index: 1;
+	  width: 96%;
+	  border: 2px black solid;
+	}
   }
 }
